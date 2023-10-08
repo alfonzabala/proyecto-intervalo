@@ -1,0 +1,41 @@
+@media(max-width: 768px){
+    main{
+        width: 100vw;
+        height: 100%;
+    }
+    header{
+        padding: 0;
+        padding-top: .625rem;
+        flex-direction: column;
+    }
+    footer{
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .parrafo-nosotros{
+        font-size: 1.6rem;
+    }
+    .seccion-index{
+        .div-pag-principal{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            div{
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .subtitulo-inicio{
+                    margin-top: 0;
+                }
+            }
+            .portada-pag-principal{
+                width: 18rem;
+                height: 18rem;
+                margin: 0 auto;
+            }
+        }
+    }
+}

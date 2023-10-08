@@ -1,0 +1,45 @@
+/*RESPONSIVE*/
+
+.grids-contenedores-nos{
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 3;
+    grid-template-areas: 
+    "header-nos header-nos header-nos"
+    "main-nos main-nos main-nos"
+    "footer-nos footer-nos footer-nos";
+    .header-nos{
+        grid-area: header-nos;
+    }
+    .main-nos{
+        grid-area: main-nos;
+        .titulo-nosotros{
+            font-family: 'Akshar';
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: 400 ;
+            text-align: center;
+            padding-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .parrafo-nosotros{
+            text-transform: lowercase;
+            font-family: 'Akshar';
+            font-size: 2rem;
+            text-align: center;
+            font-weight: 400;
+        }
+        .nos-con{
+            padding-bottom: 1.5rem;
+            font-family: 'Hanuman';
+            font-size: 2.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .footer-nos{
+        grid-area: footer-nos;
+    }
+    
+}

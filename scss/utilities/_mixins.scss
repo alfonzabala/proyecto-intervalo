@@ -1,0 +1,6 @@
+@mixin cardper($color-fondo){
+    background: $color-fondo;
+}
+@mixin logoig($color){
+    color: $color;
+}

@@ -1,474 +1,424 @@
-@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;500;700&family=Cinzel:wght@400;700;900&display=swap');
-*{
-    margin: 0;
+/*primero importo utilities*/
+/*luego importo lo de base*/
+header {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+header div {
+  display: flex;
+}
+header div nav .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+header div nav .navbar li a {
+  font-family: "Hanuman";
+  text-decoration: none;
+  color: black;
+  font-size: 1.5625rem;
+}
+
+footer {
+  display: flex;
+  gap: 0.3125rem;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-color: orange;
+  background-size: cover;
+}
+
+.logoig {
+  display: flex;
+}
+
+main {
+  background-image: url(../assets/img/fondo\ naranja\ pajaro\ intervalo.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*RESPONSIVE*/
+.div-pag-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div-pag-principal div {
+  text-align: left;
+}
+.div-pag-principal div .titulo-inicio {
+  font-family: "Akshar";
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+.div-pag-principal div .subtitulo-inicio {
+  font-family: "Cinzel";
+  font-size: 1.5rem;
+}
+
+.portada-pag-principal {
+  display: inline;
+  width: 30rem;
+  height: 30rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/*RESPONSIVE*/
+.main-contacto {
+  height: 100%;
+}
+.main-contacto .titulo-contacto {
+  font-family: "Akshar";
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 2.5rem;
+}
+.main-contacto form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.9375rem;
+}
+.main-contacto form div {
+  width: 37.5rem;
+}
+.main-contacto .pronta-respuesta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Akshar";
+  font-size: 2rem;
+}
+.main-contacto .mail-formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Akshar";
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  padding-bottom: 1.5rem;
+}
+
+/*RESPONSIVE*/
+.grids-contenedores-nos {
+  display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: 3;
+  grid-template-areas: "header-nos header-nos header-nos" "main-nos main-nos main-nos" "footer-nos footer-nos footer-nos";
+}
+.grids-contenedores-nos .header-nos {
+  grid-area: header-nos;
+}
+.grids-contenedores-nos .main-nos {
+  grid-area: main-nos;
+}
+.grids-contenedores-nos .main-nos .titulo-nosotros {
+  font-family: "Akshar";
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.grids-contenedores-nos .main-nos .parrafo-nosotros {
+  text-transform: lowercase;
+  font-family: "Akshar";
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+}
+.grids-contenedores-nos .main-nos .nos-con {
+  padding-bottom: 1.5rem;
+  font-family: "Hanuman";
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grids-contenedores-nos .footer-nos {
+  grid-area: footer-nos;
+}
+
+main .titulo-galeria {
+  font-family: "Akshar";
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-top: 2.5rem;
+}
+main .w-75 {
+  justify-content: center;
+}
+main .carousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .carousel .carousel-inner {
+  width: 43.75rem;
+  border: 0.3rem solid rgb(0, 0, 0);
+  border-radius: 2rem;
+}
+main .d-block {
+  justify-content: center;
+  align-items: center;
+}
+main .pro1, main .pro3, main .pro2 {
+  font-family: "Hanuman";
+  text-decoration: none;
+  color: rgb(151, 149, 149);
+  font-size: 1.25;
+  padding: 0.39rem;
+  border-radius: 0.625rem;
+  opacity: 0.5;
+  background-color: rgb(31, 31, 31);
+}
+main .pro1:hover, main .pro3:hover, main .pro2:hover {
+  opacity: 1;
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(0, 0, 0);
+  transition: all 1s;
+}
+main .jerodechico {
+  position: relative;
+  overflow: hidden;
+}
+main .jerodechico img {
+  bottom: 50%;
+  transform: translate(0%, -25%);
+}
+main .subtitulo-galeria {
+  display: flex;
+  justify-content: center;
+  font-family: "Akshar";
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  text-decoration: underline;
+  color: black;
+  margin-top: 1rem;
+  position: relative;
+}
+
+/*RESPONSIVE*/
+.seccion-cards1, .seccion-cards2, .seccion-cards3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 4rem;
+}
+.seccion-cards1 .img1, .seccion-cards2 .img1, .seccion-cards3 .img1, .seccion-cards1 .img9, .seccion-cards2 .img9, .seccion-cards3 .img9, .seccion-cards1 .img8, .seccion-cards2 .img8, .seccion-cards3 .img8, .seccion-cards1 .img7, .seccion-cards2 .img7, .seccion-cards3 .img7, .seccion-cards1 .img6, .seccion-cards2 .img6, .seccion-cards3 .img6, .seccion-cards1 .img5, .seccion-cards2 .img5, .seccion-cards3 .img5, .seccion-cards1 .img4, .seccion-cards2 .img4, .seccion-cards3 .img4, .seccion-cards1 .img3, .seccion-cards2 .img3, .seccion-cards3 .img3, .seccion-cards1 .img2, .seccion-cards2 .img2, .seccion-cards3 .img2 {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 15px;
+}
+.seccion-cards2, .seccion-cards3 {
+  margin-top: 3rem;
+}
+
+.seccion-cards3 {
+  padding-bottom: 3rem;
+}
+
+.titulo-perfiles {
+  font-family: "Akshar";
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-top: 2.5rem;
+}
+
+.card {
+  width: 18rem;
+  height: 22rem;
+  background: #245474;
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+}
+.card .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.72em;
+  margin: 1em;
+}
+.card .img {
+  width: 4.8em;
+  height: 4.8em;
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+}
+.card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+.card a {
+  color: white;
+  transition: 0.4s ease-in-out;
+  margin-bottom: 2rem;
+}
+.card a:hover {
+  color: red;
+  scale: 1.5;
+}
+
+.a1 svg:hover {
+  color: pink;
+}
+.a1 a {
+  color: pink;
+}
+
+.a8:hover, .card:hover {
+  background: rgb(72, 120, 209);
+}
+
+.subtitulo-perfiles {
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  font-family: "Akshar";
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.subtitulo-perfiles a {
+  text-decoration: underline;
+  color: black;
+}
+
+@media (max-width: 1024px) {
+  main {
+    width: 100vw;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    width: 100vw;
+    height: 100%;
+  }
+  header {
     padding: 0;
-    box-sizing: border-box;
-}
-/******************encabezado GLOBAL**************/
-
-header{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: orange;
-    padding: 1rem 1.5rem;
-    position: sticky;
-    top: 0;
-    z-index:2;
-}
-
-.navbar{
-    display: flex;
+    padding-top: 0.625rem;
+    flex-direction: column;
+  }
+  footer {
+    padding: 2rem;
     justify-content: center;
     align-items: center;
-    list-style: none;
-    gap: 1rem;
-    padding-top: 2rem;
-}
-.navbar li a{
-    font-family: 'Hanuman';
-    text-decoration: none;
-    color: black;
-    font-size: 1.5625rem;
-} 
-
-.logo-intervalo
-
-header div{
+  }
+  .parrafo-nosotros {
+    font-size: 1.6rem;
+  }
+  .seccion-index .div-pag-principal {
     display: flex;
-
-} 
-
-
-
-/******************textos del cuerpo del inicio**************/
-.titulo-inicio{
-    font-family: 'Akshar';
-    font-size: 1.875rem;
-    font-weight: 400;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .seccion-index .div-pag-principal div {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .seccion-index .div-pag-principal div .subtitulo-inicio {
+    margin-top: 0;
+  }
+  .seccion-index .div-pag-principal .portada-pag-principal {
+    width: 18rem;
+    height: 18rem;
+    margin: 0 auto;
+  }
 }
-.subtitulo-inicio{
-    font-family: 'Cinzel';
+@media (max-width: 425px) {
+  header {
+    flex-direction: column;
+    position: relative;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .main-contacto form div {
+    width: 20rem;
+  }
+  .seccion-cards1, .seccion-cards2, .seccion-cards3 {
+    flex-direction: column;
+  }
+  .carousel .carousel-inner {
+    width: auto;
+    height: auto;
+    border: 0.3rem solid rgb(0, 0, 0);
+    border-radius: 2rem;
+  }
+}
+@media (max-width: 375px) {
+  .navbar {
+    gap: 0.5rem;
+  }
+  .pronta-respuesta {
     font-size: 1.5rem;
-}
-.div-pag-principal div{
-    text-align: left;
-    margin-right: 1.5rem;
-}
-/******************imagenes del inicio**************/
-main{
-    background-image: url(../assets/img/fondo\ naranja\ pajaro\ intervalo.png);
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.portada-pag-principal{
-    display: inline;
-    width: 30rem;
-    height: 30rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-.div-pag-principal{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/****************** pie de pagina GLOBAL*******************************/
-footer{
-    display: flex;
-    gap: .3125rem;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem;
-    background-color: orange;
-    background-size: cover;
-}
-.logoig{
-    display: flex;
-} 
-
-/**********************CONTACTO (responsive) **************************************/
-
-.main-contacto{
-    height: 100%;
-}
-
-body main form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: .9375rem;
-}
-
-body main form div{
-    width: 37.5rem;
-}
-
-.titulo-contacto{
-    font-family: 'Akshar';
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 400 ;
-    text-align: center;
-    padding-top: 2.5rem;
-
-}
-
-.pronta-respuesta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-family: 'Akshar';
-    font-size: 2rem;
-}
-.mail-formulario{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Akshar';
-    font-size: 1.5rem;
-    margin-bottom: 0;
-    padding-bottom: 1.5rem;
-}
-
-/************************** NOSOTROS (responsive) ************************************/
-
-.grids-contenedores-nos{
-    display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 3;
-    grid-template-areas: 
-    "header-nos header-nos header-nos"
-    "main-nos main-nos main-nos"
-    "footer-nos footer-nos footer-nos";
-}
-
-.header-nos{
-    grid-area: header-nos;
-}
-.main-nos{
-    grid-area: main-nos;
-}
-.footer-nos{
-    grid-area: footer-nos;
-}
-
-.titulo-nosotros{
-    font-family: 'Akshar';
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 400 ;
-    text-align: center;
-    padding-top: 2.5rem;
-    margin-bottom: 1rem;
-}
-.parrafo-nosotros{
-    text-transform: capitalize;
-    font-family: 'Akshar';
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 400;
-}
-.nos-con{
-    padding-bottom: 1.5rem;
-    font-family: 'Hanuman';
-    font-size: 2.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/**********************************GALERIA****************************************/
-
-.contenedor-proyectos{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-.titulo-galeria{
-    font-family: 'Akshar';
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 400 ;
-    text-align: center;
-    margin-bottom: 1rem;
-    padding-top: 2.5rem;
-}
-
-.subtitulo-galeria{
-    display: flex;
-    justify-content: center;
-    font-family: 'Akshar';
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 400 ;
-    text-align: center;
-    padding-bottom: 1.5rem;
-}
-
-.proyectos{
-    display: flex;
-    flex-direction: column;
+  }
+  .main-contacto form div {
     width: 16rem;
+  }
 }
-
-.flechitaizq{
-    align-items: center;
-}
-
-.proyecto1{
-    border: .5rem solid white;
-    border-radius: 2rem;
-    overflow: hidden;
-}
-
-.proyecto2{
-    border: .5rem solid black;
-    border-radius: 2rem;
-    overflow: hidden;
-}
-
-.proyecto3{
-    border: .5rem solid white;
-    border-radius: 2rem;
-    overflow: hidden;
-}
-
-.proyecto1 button{
-    padding: .625rem;
-    background-color: blueviolet;
-}
-
-.proyecto2 button{
-    padding: .625rem;
-    background-color: cadetblue;
-}
-
-.proyecto3 button{
-    padding: .625rem;
-    background-color: red;
-}
-
-.proyecto1 button a{
-    font-family: 'Akshar';
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: white;
-}
-
-.proyecto2 button a{
-    font-family: 'Akshar';
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: black;
-}
-
-.proyecto3 button a{
-    font-family: 'Akshar';
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: white;
-}
-
-/***************************PERFILES**********************************/
-
-.body-perfiles{
-    height: 100%;
-}
-
-.contenedor-perfil1{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding-bottom: 1.5rem;
-}
-
-.perfil1-parte-arriba{
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-}
-.fotouser{
-    width: 6.25rem;
-    background-color: rgba(0, 0, 0, 0.692);
-}
-.perfil1-parte-abajo{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    background-color: rgba(255, 255, 0, 0.562);
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-}
-.perfil1-proyecto1{
-    border: 0.25rem solid rgb(170, 168, 168);
-    box-shadow: 2px 2px 10px grey;
+@media (max-width: 320px) {
+  .div-pag-principal div {
+    margin: auto;
+  }
+  .div-pag-principal .portada-pag-principal {
     width: 18rem;
     height: 18rem;
-    border-radius: 2rem;
-}
-.perfil1-proyecto2{
-    border: 0.25rem solid rgb(170, 168, 168);
-    box-shadow: 2px 2px 10px grey;
-    width: 18rem;
-    height: 18rem;
-    border-radius: 2rem;
+    margin: 0;
+  }
 }
 
-.logoig-color{
-    width: 2rem;
-    height: 2rem;
-    margin-top: 15.5rem;
-}
-.logolinkedin-color{
-    width: 2rem;
-    height: 2rem;
-    margin-top: 15.5rem;
-}
-
-.perfil1-redes{
-    display: flex;
-    gap: .3125rem;
-}
-
-.titulo-perfiles{
-    font-family: 'Akshar';
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 400 ;
-    text-align: center;
-    margin-bottom: 1rem;
-    padding-top: 2.5rem;
-}
-
-.subtitulo-perfiles{
-    margin-left: .5rem;
-    font-family: 'Akshar';
-    font-weight: 400;
-}
-
-.parrafo-perfiles{
-    margin-left: .5rem;
-    font-family: 'Akshar';
-    font-weight: 400;
-}
-
-
-
-/***************************************media 2560px*********************************************/
-
-@media(max-width: 2560px){
-    main{
-        width: 100vw;
-        height: 100vh;
-    }
-}
-
-
-
-
-
-
-/****************************************media 1440px**********************************************/
-
-@media(max-width: 1440px){
-    main{
-        width: 100vw;
-        height: 100vh;
-    }
-}
-
-
-
-/*********************************** media 1024px*************************************************/
-
-@media(max-width: 1024px){
-    main{
-        width: 100vw;
-        height: 100vh;
-    }
-}
-
-
-
-
-/*****************************media 768px**********************************************/
-
-@media(max-width: 768px){
-    header{
-        padding: 0;
-        padding-top: .625rem;
-        flex-direction: column;
-    }
-    footer{
-        padding: 2rem;
-        justify-content: center;
-        align-items: center;
-    }
-    .parrafo-nosotros{
-        font-size: 1.6rem;
-    }
-}
-
-/********************************media 425px*************************************************/
-
-@media(max-width: 425px){
-    header{
-        flex-direction: column;
-    }
-    .navbar li a{
-        font-size: 1.2rem;
-    }
-    .main-contacto form div{
-        width: 20rem;
-    }
-}
-
-/**********************************media 375px******************************************************/
-
-@media(max-width: 375px){
-    .navbar{
-        gap: .5rem;
-        
-    }
-    .pronta-respuesta{
-        font-size: 1.5rem;
-    }
-    .main-contacto form div{
-        width: 16rem;
-    }
-}
-
-/***********************************media 320px****************************************************/
-
-@media(max-width: 320px){
-    .navbar li a{
-        font-size: 1rem;
-    }
-    .navbar{
-        gap: .3rem;
-    }
-    .parrafo-nosotros{
-        font-size: 1.5rem;
-    }
-    .subtitulo-galeria{
-        font-size: 2rem;
-    }
-}
+/*# sourceMappingURL=style.css.map */

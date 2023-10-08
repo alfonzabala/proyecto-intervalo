@@ -1,0 +1,22 @@
+/*primero importo utilities*/
+@import "./utilities/variables";
+@import "./utilities/mixins";
+
+
+/*luego importo lo de base*/
+
+
+
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/main-global";
+@import "./layout/main-index";
+@import "./layout/main-contacto";
+@import "./layout/main-nosotros";
+@import "./layout/main-galeria";
+@import "./layout/main-perfiles";
+@import "./layout/medias/media1024";
+@import "./layout/medias/media768";
+@import "./layout/medias/media425";
+@import "./layout/medias/media375";
+@import "./layout/medias/media320";

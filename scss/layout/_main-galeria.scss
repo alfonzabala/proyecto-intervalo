@@ -1,0 +1,75 @@
+main{
+    .titulo-galeria{
+        font-family: 'Akshar';
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: 400 ;
+        text-align: center;
+        margin-bottom: 1rem;
+        padding-top: 2.5rem;
+    }
+    .w-75{
+        justify-content: center;
+    }
+    .carousel{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .carousel-inner{
+            width: 43.75rem;
+            border: .3rem solid $color-boton;
+            border-radius: 2rem;
+            
+        }
+    }
+    .d-block{
+        justify-content: center;
+        align-items: center;
+    }
+    .pro1{
+        font-family: 'Hanuman';
+        text-decoration: none;
+        color: rgb(151, 149, 149);
+        font-size: 1.25;
+        padding: .39rem;
+        border-radius: .625rem;
+        opacity: .5;
+        background-color: rgb(31, 31, 31);
+        &:hover{
+            opacity: 1;
+            color: rgb(255, 255, 255);
+            border: 3px solid $color-boton;
+            transition: all 1s;
+        }
+    }
+    .jerodechico{
+        position: relative;
+        overflow: hidden;
+        img{
+            bottom: 50%;
+            transform: translate(0%, -25%);
+        }
+    }
+    .pro2{
+        @extend .pro1;
+    }
+    .pro3{
+        @extend .pro1;
+    }
+    
+    .subtitulo-galeria{
+        display: flex;
+        justify-content: center;
+        font-family: 'Akshar';
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: 400 ;
+        text-align: center;
+        padding-bottom: 1.5rem;
+        text-decoration: underline;
+        color: black;
+        margin-top: 1rem;
+        position: relative;
+    }
+}
