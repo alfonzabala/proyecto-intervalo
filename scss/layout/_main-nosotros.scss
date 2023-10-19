@@ -1,16 +1,6 @@
 /*RESPONSIVE*/
 
-.grids-contenedores-nos{
-    display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 3;
-    grid-template-areas: 
-    "header-nos header-nos header-nos"
-    "main-nos main-nos main-nos"
-    "footer-nos footer-nos footer-nos";
-    .header-nos{
-        grid-area: header-nos;
-    }
+
     .main-nos{
         grid-area: main-nos;
         .titulo-nosotros{
@@ -30,7 +20,7 @@
             font-weight: 400;
         }
         .nos-con{
-            padding-bottom: 1.5rem;
+            padding-bottom: 2rem;
             font-family: 'Hanuman';
             font-size: 2.4rem;
             display: flex;
@@ -42,4 +32,3 @@
         grid-area: footer-nos;
     }
     
-}

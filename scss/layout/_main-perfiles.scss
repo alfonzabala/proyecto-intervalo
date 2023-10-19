@@ -106,14 +106,7 @@
         scale: 1.5;
     }
 }
-.a1{
-    svg:hover{
-        @include logoig(pink);
-    }
-    a{
-        @include logoig(pink);
-    }
-}
+
 .a8:hover{
     @include cardper(rgb(72, 120, 209));
 }

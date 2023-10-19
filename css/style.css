@@ -1,35 +1,57 @@
 /*primero importo utilities*/
 /*luego importo lo de base*/
-header {
-  display: flex;
+.nav-wrapper {
   width: 100%;
-  flex-direction: row;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: orange;
   padding: 1rem 1.5rem;
-  position: sticky;
-  top: 0;
-  z-index: 2;
 }
-header div {
-  display: flex;
-}
-header div nav .navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+nav ul {
   list-style: none;
-  gap: 1rem;
-  padding-top: 2rem;
+  display: flex;
+  gap: 1.3rem;
+  margin-top: 1rem;
 }
-header div nav .navbar li a {
+nav ul li a {
   font-family: "Hanuman";
   text-decoration: none;
   color: black;
-  font-size: 1.5625rem;
+  font-size: 1.5rem;
 }
 
+nav #toggle, nav label {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav .menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.5rem 0;
+  }
+  nav label {
+    display: flex;
+    cursor: pointer;
+  }
+  nav #toggle:checked ~ .menu {
+    height: 100%;
+  }
+}
 footer {
   display: flex;
   gap: 0.3125rem;
@@ -121,19 +143,10 @@ main {
 }
 
 /*RESPONSIVE*/
-.grids-contenedores-nos {
-  display: grid;
-  grid-template-columns: 3;
-  grid-template-rows: 3;
-  grid-template-areas: "header-nos header-nos header-nos" "main-nos main-nos main-nos" "footer-nos footer-nos footer-nos";
-}
-.grids-contenedores-nos .header-nos {
-  grid-area: header-nos;
-}
-.grids-contenedores-nos .main-nos {
+.main-nos {
   grid-area: main-nos;
 }
-.grids-contenedores-nos .main-nos .titulo-nosotros {
+.main-nos .titulo-nosotros {
   font-family: "Akshar";
   text-transform: uppercase;
   font-size: 3rem;
@@ -142,22 +155,23 @@ main {
   padding-top: 2.5rem;
   margin-bottom: 1rem;
 }
-.grids-contenedores-nos .main-nos .parrafo-nosotros {
+.main-nos .parrafo-nosotros {
   text-transform: lowercase;
   font-family: "Akshar";
   font-size: 2rem;
   text-align: center;
   font-weight: 400;
 }
-.grids-contenedores-nos .main-nos .nos-con {
-  padding-bottom: 1.5rem;
+.main-nos .nos-con {
+  padding-bottom: 2rem;
   font-family: "Hanuman";
   font-size: 2.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.grids-contenedores-nos .footer-nos {
+
+.footer-nos {
   grid-area: footer-nos;
 }
 
@@ -307,13 +321,6 @@ main .subtitulo-galeria {
   scale: 1.5;
 }
 
-.a1 svg:hover {
-  color: pink;
-}
-.a1 a {
-  color: pink;
-}
-
 .a8:hover, .card:hover {
   background: rgb(72, 120, 209);
 }
@@ -343,11 +350,6 @@ main .subtitulo-galeria {
   main {
     width: 100vw;
     height: 100%;
-  }
-  header {
-    padding: 0;
-    padding-top: 0.625rem;
-    flex-direction: column;
   }
   footer {
     padding: 2rem;
@@ -379,13 +381,6 @@ main .subtitulo-galeria {
   }
 }
 @media (max-width: 425px) {
-  header {
-    flex-direction: column;
-    position: relative;
-  }
-  .navbar {
-    flex-direction: column;
-  }
   .main-contacto form div {
     width: 20rem;
   }
@@ -400,9 +395,6 @@ main .subtitulo-galeria {
   }
 }
 @media (max-width: 375px) {
-  .navbar {
-    gap: 0.5rem;
-  }
   .pronta-respuesta {
     font-size: 1.5rem;
   }
@@ -418,6 +410,9 @@ main .subtitulo-galeria {
     width: 18rem;
     height: 18rem;
     margin: 0;
+  }
+  footer {
+    gap: 0.5rem;
   }
 }
 

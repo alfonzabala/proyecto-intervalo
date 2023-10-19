@@ -1,33 +1,55 @@
-header{
-    display: flex;
+
+.nav-wrapper{
     width: 100%;
-    flex-direction: row;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: orange;
     padding: 1rem 1.5rem;
-    position: sticky;
-    top: 0;
-    z-index:2;
-    div{
-        display: flex;
-        nav{
-            .navbar{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                list-style: none;
-                gap: 1rem;
-                padding-top: 2rem;
-                li{
-                    a{
-                        font-family: 'Hanuman';
-                        text-decoration: none;
-                        color: black;
-                        font-size: 1.5625rem;
-                    }
-                }
-            }
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1.3rem;
+    margin-top: 1rem;
+    li{
+        a{
+            font-family: 'Hanuman';
+            text-decoration: none;
+            color: black;
+            font-size: 1.5rem;
         }
+    }
+}
+
+nav #toggle, nav label{
+    display: none;
+}
+
+@media (max-width:768px){
+    nav .menu{
+        width:100%;
+        height: 0;
+        overflow: hidden;
+    }
+    nav ul{
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0.5rem 0 ;
+    }
+    nav label{
+        display:flex;
+        cursor: pointer;
+    }
+    nav #toggle:checked ~ .menu{
+        height: 100%;
     }
 }
